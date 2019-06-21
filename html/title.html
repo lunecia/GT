@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Greentown | </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link href="../assets/style/normalize.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css">
+    <link rel="stylesheet" href="../assets/style/jquery.fancybox.css">
+    <link href="../assets/style/main.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="title" id="title">
+      <canvas id="canvas"></canvas>
+      <div class="title-wrap">
+        <h1 class="logo"><img src="../assets/images/headline.png"></h1>
+      </div>
+    </div>
+    <script src="../assets/script/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js" type="text/javascript"></script>
+    <script src="../assets/script/smoke.js" type="text/javascript"></script>
+    <script>
+      var canvas = document.getElementById('canvas')
+      var ctx = canvas.getContext('2d')
+      canvas.width = innerWidth
+      canvas.height = innerHeight
+      
+      var party = smokemachine(ctx, [149, 149, 149])
+      party.start() // start animating
+      
+      party.addsmoke(innerWidth/2, innerHeight+100, 300)
+      onclick=e => {
+      	console.log(e)
+      	party.step()
+      }
+    </script>
+    <script src="../assets/script/main.js" type="text/javascript"></script>
+  </body>
+</html>

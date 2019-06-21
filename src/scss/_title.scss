@@ -1,0 +1,51 @@
+.title {
+	@extend %clearfix;
+	
+	.title-wrap {
+		display: flex;
+		position: absolute;
+    	top: 0;
+    	height: 100%;
+    	width: 100%;
+    	z-index: -1;
+    	align-items: center;
+    	background: linear-gradient(180deg, #c5ccd0, #9cadb3, #2a6c9a, #c8f1fe);
+		background-size: 800% 800%;
+		-webkit-animation: gd 3s 3s ease forwards;
+		-moz-animation: gd 3s 3s ease forwards;
+		animation: gd 3s 3s ease forwards;
+	}
+
+	
+
+	@-webkit-keyframes gd {
+	    0%{background-position:50% 0%}
+	    100%{background-position:50% 100%}
+	}
+	@-moz-keyframes gd {
+	    0%{background-position:50% 0%}
+	    100%{background-position:50% 100%}
+	}
+	@keyframes gd { 
+	    0%{background-position:50% 0%}
+	    100%{background-position:50% 100%}
+	}
+
+	.logo {
+		width: 78%;
+    	margin: 0 auto;
+	}
+
+	@include breakpoint(tablet) {
+	
+	}
+	@include breakpoint(tablet-wide) {
+	
+	}
+	@include breakpoint(mobile) {
+		
+	}
+	@include breakpoint(over) {
+		
+	}
+}

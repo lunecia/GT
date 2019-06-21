@@ -1,0 +1,42 @@
+extends docwrap
+
+
+append config
+	- var keywords = ''
+	- var description = ''
+	- var page = 'title'
+	- var title = 0
+
+block style
+	
+block content
+	
+	canvas(id="canvas")
+	.title-wrap
+		h1.logo
+			img(src="../assets/images/headline.png")
+
+
+		
+					
+block script
+	script(src='../assets/script/smoke.js', type='text/javascript')
+	script.
+		var canvas = document.getElementById('canvas')
+		var ctx = canvas.getContext('2d')
+		canvas.width = innerWidth
+		canvas.height = innerHeight
+
+		var party = smokemachine(ctx, [149, 149, 149])
+		party.start() // start animating
+
+		party.addsmoke(innerWidth/2, innerHeight+100, 300)
+		onclick=e => {
+			console.log(e)
+			party.step()
+		}
+
+		
+
+
+
